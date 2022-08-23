@@ -14,7 +14,24 @@ function luckyNumbers(n){
     }
     return arr;
 }
-console.log(luckyNumbers('7'));
+console.log(luckyNumbers(7));
+
+// This one contains an array with numbers already set 
+
+const luckyNumber = (num) => {
+    let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let luckies = [];
+
+    for(let i = 0; i < num; i++){
+        let tempNum = Math.floor(Math.random() * numberArray.length);
+        console.log(tempNum);
+        luckies.push(numberArray.splice(tempNum, 1));
+        console.log(luckies);
+    }
+    return luckies
+}
+
+console.log(luckyNumber(3));
 
 /*function generateUniqueRandom(maxNr) {
     //Generate random number
@@ -39,21 +56,6 @@ console.log(luckyNumbers('7'));
 
 
 console.log(generateUniqueRandom(1,9))*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //_____________________________________
 /*function randomNum(n){
